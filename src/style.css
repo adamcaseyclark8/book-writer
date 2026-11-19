@@ -2,12 +2,12 @@
   /* palette matched to the screenshot */
   --bg: #2b303b;
   --panel: #262a33;
-  --border: #353b48;
+  --border: #4a5263;
   --text: #c0c5ce;
   --text-bright: #dfe1e8;
-  --muted: #65737e;
-  --gutter-text: #65737e;
-  --active-gutter: #3b4252;
+  --muted: #a3acb9;
+  --gutter-text: #8f99a8;
+  --active-gutter: #434c5e;
   --selection: #4f5b66;
   --cursor: #f99157;
   --mono: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
@@ -42,9 +42,9 @@ button {
   border-radius: 4px;
   padding: 2px 8px;
   cursor: pointer;
-  color: var(--muted);
+  color: var(--text);
 }
-button:hover { color: var(--text-bright); border-color: var(--muted); }
+button:hover { color: #ffffff; border-color: var(--muted); }
 
 /* ---- sidebar ---- */
 .sidebar {
@@ -64,6 +64,7 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 4px;
+  color: var(--text-bright);
 }
 .book-actions { display: flex; gap: 6px; }
 .book-actions button { font-size: 11px; }
@@ -82,7 +83,7 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
   gap: 6px;
   padding: 4px 6px;
   border-radius: 3px;
-  color: var(--text);
+  color: var(--text-bright);
   text-decoration: none;
 }
 .chapter-list a:hover { background: var(--bg); }
@@ -126,7 +127,7 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
   border-bottom: 1px solid var(--border);
   outline: none;
   resize: vertical;
-  color: var(--muted);
+  color: var(--text);
   padding: 4px 0 8px;
 }
 
@@ -142,3 +143,5 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
   .chapter-head, .chapter-summary { padding-left: 16px; margin-left: 16px; }
   .chapter-head { padding-left: 16px; }
 }
+
+::placeholder { color: var(--muted); opacity: 1; }
