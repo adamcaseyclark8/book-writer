@@ -7,11 +7,16 @@ Each chapter is its own page. Click any chapter in the sidebar to jump straight 
 
 1. React + Material UI frontend in TypeScript, built with Vite (CodeMirror for the chapter editor)
 2. Node + Express API
-3. SQLite database via better-sqlite3
+3. PostgreSQL database via node-postgres (`pg`)
 
 ## Run it
 
-Requires Node 22.12 or newer. Check with `node -v`. If you upgrade Node, delete `node_modules` and run `npm install` again.
+You need two things installed:
+
+1. Node 22.13 or newer. Check with `node -v`. If you upgrade Node, delete `node_modules` and run `npm install` again.
+2. PostgreSQL, running. On a Mac the easiest way is [Postgres.app](https://postgresapp.com): install it, open it and click Initialize. Or use Homebrew: `brew install postgresql@17` then `brew services start postgresql@17`.
+
+The app creates its database (`bookwriter`) and tables the first time it starts.
 
 ```bash
 npm install
@@ -48,9 +53,21 @@ Open http://localhost:3001.
 
 ## Data
 
-Everything is stored in `data/book.db`.
-Back up that file to back up your book.
-Set `BOOK_DATA_DIR` to store it somewhere else.
+Everything is stored in a PostgreSQL database called `bookwriter`.
+By default the app connects to `localhost:5432` as your own user with no password, which is how Postgres.app and Homebrew are set up.
+To use a different server, set `DATABASE_URL`, for example `DATABASE_URL=postgres://user:password@host:5432/bookwriter npm run dev`.
+
+To back it up:
+
+```bash
+pg_dump bookwriter > bookwriter-backup.sql
+```
+
+### Moving from the old SQLite version
+
+Earlier versions stored books in `data/book.db`.
+The first time the app starts with an empty Postgres database, it copies everything from that file automatically.
+The old file is left untouched, so you can delete it once you've checked your books are there.
 
 ## API
 
