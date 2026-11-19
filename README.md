@@ -5,7 +5,7 @@ Each chapter is its own page. Click any chapter in the sidebar to jump straight 
 
 ## Stack
 
-1. TypeScript frontend built with Vite (no framework)
+1. React + Material UI frontend in TypeScript, built with Vite (CodeMirror for the chapter editor)
 2. Node + Express API
 3. SQLite database via better-sqlite3
 

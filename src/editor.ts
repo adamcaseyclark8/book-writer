@@ -8,6 +8,7 @@ import {
   drawSelection,
 } from "@codemirror/view";
 import { defaultKeymap, history, historyKeymap, indentWithTab } from "@codemirror/commands";
+import { colors, mono } from "./palette";
 
 // Colours taken from the screenshot: slate background, muted gutter numbers,
 // a lighter band on the current line and an orange cursor.
@@ -15,25 +16,25 @@ const theme = EditorView.theme(
   {
     "&": {
       height: "100%",
-      color: "var(--text)",
-      backgroundColor: "var(--bg)",
+      color: colors.text,
+      backgroundColor: colors.bg,
       fontSize: "13px",
     },
     "&.cm-focused": { outline: "none" },
     ".cm-scroller": {
-      fontFamily: "var(--mono)",
+      fontFamily: mono,
       lineHeight: "1.4",
     },
     // Wrap at about 80 characters (plus the line padding below).
     ".cm-content": {
       padding: "12px 0 40vh",
-      caretColor: "var(--cursor)",
+      caretColor: colors.cursor,
       maxWidth: "calc(80ch + 34px)",
     },
     ".cm-line": { padding: "0 24px 0 10px" },
     ".cm-gutters": {
-      backgroundColor: "var(--bg)",
-      color: "var(--gutter-text)",
+      backgroundColor: colors.bg,
+      color: colors.gutterText,
       border: "none",
     },
     ".cm-lineNumbers .cm-gutterElement": {
@@ -42,14 +43,14 @@ const theme = EditorView.theme(
     },
     ".cm-activeLine": { backgroundColor: "transparent" },
     ".cm-activeLineGutter": {
-      backgroundColor: "var(--active-gutter)",
-      color: "var(--text-bright)",
+      backgroundColor: colors.activeGutter,
+      color: colors.textBright,
     },
     ".cm-cursor, .cm-dropCursor": {
-      borderLeft: "2px solid var(--cursor)",
+      borderLeft: `2px solid ${colors.cursor}`,
     },
     "&.cm-focused .cm-selectionBackground, .cm-selectionBackground, ::selection": {
-      backgroundColor: "var(--selection) !important",
+      backgroundColor: `${colors.selection} !important`,
     },
   },
   { dark: true }
