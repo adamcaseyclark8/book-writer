@@ -1,15 +1,15 @@
 :root {
-  /* palette matched to the screenshot */
-  --bg: #2b303b;
-  --panel: #262a33;
-  --border: #4a5263;
-  --text: #c0c5ce;
-  --text-bright: #dfe1e8;
-  --muted: #a3acb9;
-  --gutter-text: #8f99a8;
-  --active-gutter: #434c5e;
+  /* palette sampled directly from the screenshot */
+  --bg: #303841;
+  --panel: #2a3139;
+  --border: #4d5864;
+  --text: #d8dee9;
+  --text-bright: #eef1f6;
+  --muted: #a7adb7;
+  --gutter-text: #848b95;
+  --active-gutter: #4d5864;
   --selection: #4f5b66;
-  --cursor: #f99157;
+  --cursor: #f9ae58;
   --mono: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
   color-scheme: dark;
 }
