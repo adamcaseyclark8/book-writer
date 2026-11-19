@@ -24,11 +24,11 @@ const theme = EditorView.theme(
       fontFamily: "var(--mono)",
       lineHeight: "1.4",
     },
-    // Wrap at about 120 characters (plus the line padding below).
+    // Wrap at about 100 characters (plus the line padding below).
     ".cm-content": {
       padding: "12px 0 40vh",
       caretColor: "var(--cursor)",
-      maxWidth: "calc(120ch + 34px)",
+      maxWidth: "calc(100ch + 34px)",
     },
     ".cm-line": { padding: "0 24px 0 10px" },
     ".cm-gutters": {
