@@ -11,7 +11,7 @@ Each chapter is its own page. Click any chapter in the sidebar to jump straight 
 
 ## Run it
 
-Requires Node 18 or newer.
+Requires Node 22.12 or newer. Check with `node -v`. If you upgrade Node, delete `node_modules` and run `npm install` again.
 
 ```bash
 npm install

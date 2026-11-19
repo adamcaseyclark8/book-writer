@@ -9,7 +9,7 @@
     "start": "vite build && tsx server/index.ts"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12"
   },
   "dependencies": {
     "@codemirror/commands": "^6.11.1",
