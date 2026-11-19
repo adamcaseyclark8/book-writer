@@ -22,7 +22,7 @@ html, body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--mono);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 #app {
@@ -66,7 +66,7 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
   padding: 4px;
 }
 .book-actions { display: flex; gap: 6px; }
-.book-actions button { font-size: 12px; }
+.book-actions button { font-size: 11px; }
 
 .chapter-list {
   list-style: none;
@@ -78,6 +78,7 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
 .chapter-list a {
   display: grid;
   grid-template-columns: 28px 1fr auto;
+  align-items: baseline;
   gap: 6px;
   padding: 4px 6px;
   border-radius: 3px;
@@ -86,12 +87,12 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
 }
 .chapter-list a:hover { background: var(--bg); }
 .chapter-list li.active a { background: var(--active-gutter); color: var(--text-bright); }
-.chapter-list .num, .chapter-list .words { color: var(--muted); font-size: 12px; text-align: right; }
+.chapter-list .num, .chapter-list .words { color: var(--muted); font-size: 11px; text-align: right; }
 .chapter-list .num { text-align: right; }
 .chapter-list .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .add-chapter { width: 100%; }
-.totals { color: var(--muted); font-size: 12px; padding: 4px 2px 0; }
+.totals { color: var(--muted); font-size: 11px; padding: 4px 2px 0; }
 
 /* ---- main ---- */
 .main {
@@ -112,11 +113,11 @@ button:hover { color: var(--text-bright); border-color: var(--muted); }
   background: transparent;
   border: none;
   outline: none;
-  font-size: 18px;
+  font-size: 14px;
   color: var(--text-bright);
 }
 .chapter-tools { display: flex; align-items: center; gap: 6px; }
-.status { color: var(--muted); font-size: 12px; min-width: 64px; text-align: right; }
+.status { color: var(--muted); font-size: 11px; min-width: 64px; text-align: right; }
 
 .chapter-summary {
   margin: 0 16px 8px 60px;
