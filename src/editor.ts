@@ -17,18 +17,18 @@ const theme = EditorView.theme(
       height: "100%",
       color: "var(--text)",
       backgroundColor: "var(--bg)",
-      fontSize: "15px",
+      fontSize: "13px",
     },
     "&.cm-focused": { outline: "none" },
     ".cm-scroller": {
       fontFamily: "var(--mono)",
       lineHeight: "1.4",
     },
-    // Wrap at about 100 characters (plus the line padding below).
+    // Wrap at about 80 characters (plus the line padding below).
     ".cm-content": {
       padding: "12px 0 40vh",
       caretColor: "var(--cursor)",
-      maxWidth: "calc(100ch + 34px)",
+      maxWidth: "calc(80ch + 34px)",
     },
     ".cm-line": { padding: "0 24px 0 10px" },
     ".cm-gutters": {
